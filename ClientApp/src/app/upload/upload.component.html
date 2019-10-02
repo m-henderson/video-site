@@ -1,0 +1,40 @@
+
+<div class="row">
+  <div class="col">
+    <h2 style="text-align: center;">Upload Video</h2>
+    <form [formGroup]="uploadForm" (ngSubmit)="upload()" class="upload-form">
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control" formControlName="title">
+        <label>Description</label>
+        <textarea class="form-control" formControlName="description"></textarea>
+        <div style="margin-top: 10px;margin-bottom: 10px;">
+            <input type="file" class="form-control-file" formControlName="file"/>
+        </div>
+        <label>Tags</label>
+        <input type="text" class="form-control" formControlName="tags">
+        <div class="form-group" style="margin-top: 10px">
+            <label for="exampleFormControlSelect1">Play List</label>
+            <select class="form-control" id="exampleFormControlSelect1" formControlName='playList'>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+        </div>
+      <!--Use Better Checkbox-->
+        <div class="form-group">
+            <div class="input-group mb-3" style="margin-top: 10px;">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="checkbox" aria-label="Checkbox for following text input" formControlName="behindPayWall">
+                  </div>
+                </div>
+                <input type="text" class="form-control" aria-label="Text input with checkbox" value="{{payWallDesc}}" readonly>
+              </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+  </div>
+</div>
