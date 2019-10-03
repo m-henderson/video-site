@@ -32,8 +32,17 @@
                 </div>
                 <input type="text" class="form-control" aria-label="Text input with checkbox" value="{{payWallDesc}}" readonly>
               </div>
+
+              <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" formControlName="isPublic" name="isPublic">
+                <label class="custom-control-label" for="customRadio1">Public</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" formControlName="isPublic" name="isPublic">
+                <label class="custom-control-label" for="customRadio2">Private</label>
+              </div>
+            </div>
         </div>
-      </div>
       <button type="submit" class="btn btn-primary">Upload</button>
     </form>
   </div>

@@ -22,7 +22,8 @@ export class UploadComponent implements OnInit {
       file: new FormControl(''), //TODO: handle file with angular forms?
       behindPayWall: new FormControl(''),
       tags: new FormControl(''),
-      playList: new FormControl('')
+      playList: new FormControl(''),
+      isPublic: new FormControl('')
     });
   }
 
