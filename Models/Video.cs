@@ -22,7 +22,7 @@ namespace video_site.Models {
         public string File { get; set; }
 
         // The tags used for curating and sorting via algorythm
-        public ICollection<string> Tags { get; set; }
+        public List<string> Tags { get; set; }
 
         // The playlist category that the video is associated with
         public int PlayListId { get; set; }
@@ -30,5 +30,10 @@ namespace video_site.Models {
         // Bit value to determine if the user wants the video to be 
         // currated behind the metered paywall
         public bool BehindPayWall { get; set; }
+
+        public Video()
+        {
+            this.Tags = new List<string>();
+        }
     }
 }

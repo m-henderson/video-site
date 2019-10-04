@@ -8,7 +8,7 @@ import { EntityBase } from '../model/entity-base';
   providedIn: 'root'
 })
 export class VideoService {
-
+  apiUrl = '/api/video';
   constructor(private http: HttpClient) { }
 
   /**
@@ -17,8 +17,12 @@ export class VideoService {
    * videos for the signed in user.
    * @param videoId the primarey key of the video being requested
    */
-  get(videoId?: number): Observable<Video> {
+  get(videoId: number): Observable<Video> {
     return this.http.get<Video>(`/api/videos/${videoId}`, {});
+  }
+
+  getAll(): Observable<Video[]> {
+    return this.http.get<Video[]>(`/api/video`);
   }
 
   /**

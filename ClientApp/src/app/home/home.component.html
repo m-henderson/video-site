@@ -1,2 +1,10 @@
-<app-card>
-</app-card>
+<div class="row card-group">
+  <div class="col-4" *ngFor="let video of videos">
+      <app-card
+      [title]='video.title'
+      [description]='video.description'
+      [buttonText]='"Watch"'
+      >
+    </app-card>
+  </div>
+</div>
