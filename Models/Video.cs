@@ -26,6 +26,8 @@ namespace video_site.Models {
 
         // The playlist category that the video is associated with
         public int PlayListId { get; set; }
+        
+        public string Name {get; set; 
 
         // Bit value to determine if the user wants the video to be 
         // currated behind the metered paywall
